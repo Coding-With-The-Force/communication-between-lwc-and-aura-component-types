@@ -1,0 +1,11 @@
+<!--
+ - Created by gerry on 10/3/2020.
+ -->
+
+<!-- Lwc Communication -->
+<template>
+	<p>This is the data received from the Aura Component: {dataReceived}</p>
+
+	<lightning-input class="dataToSend" placeholder="Enter text to transfer"></lightning-input>
+	<lightning-button variant="brand" label="Pass data to Aura Component" onclick={communicateToAura} ></lightning-button>
+</template>

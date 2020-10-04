@@ -1,0 +1,15 @@
+<!--
+ - Created by gerry on 10/3/2020.
+ -->
+<!--Aura Component-->
+<aura:component description="Aura_Communication">
+	<aura:attribute name="dataReceived" type="String"/>
+
+	<!--The onsenddata is what handles the custom event we made in our LWC-->
+	<c:lwc_Communication onsenddata="{!c.receiveLWCData}" aura:id="lwcComp" />
+
+	<p>This is the data receieved from our LWC: {!v.dataReceived}</p>
+	<lightning:input aura:id="dataToPass" />
+
+	<lightning:button label="Pass data to LWC" onclick="{!c.passDataToLWC}"/>
+</aura:component>
